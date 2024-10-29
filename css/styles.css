@@ -1,0 +1,55 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+.navbar-brand {
+  margin-top: 3px;
+}
+p {
+  margin-top: 20px;
+}
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link.active {
+  color: #081b39;
+  font-weight: bold;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 50px;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-heading {
+  margin-bottom: 2.5rem;
+}
+
+.central-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: #b42231;
+}
