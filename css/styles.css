@@ -1,55 +1,236 @@
 body {
   font-family: Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-brand {
-  margin-top: 3px;
+.container > div.d-flex {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  transition: box-shadow 0.3s ease;
 }
-p {
-  margin-top: 20px;
+
+.container > div.d-flex:hover {
+  box-shadow: 0 10px 25px rgba(180, 34, 49, 0.3);
 }
-.feature-icon {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.75rem;
+
+h1.display-4 {
+  color: #b42231;
+  margin-bottom: 1.5rem;
 }
+
+
+p.lead {
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.btn-primary {
+  background-color: #b42231;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #7f1821;
+  box-shadow: 0 0 10px rgba(180, 34, 49, 0.6);
+  outline: none;
+}
+
 
 .nav-link {
-  color: black;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
+
+.nav-link:hover {
+  color: #b42231;
+  text-decoration: underline;
+}
+
 
 .nav-link.active {
-  color: #081b39;
-  font-weight: bold;
+  color: #b42231;
+  font-weight: 700;
+  border-bottom: 2px solid #b42231;
+  padding-bottom: 0.25rem;
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 50px;
-}
 
-.image-item img {
+.image-section img,
+.image-holder video {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-.contact-list {
-  list-style: none;
+
+@media (max-width: 767px) {
+  .container > div.d-flex {
+    flex-direction: column !important;
+    padding: 1.5rem;
+  }
+  .text-section,
+  .image-section {
+    max-width: 100%;
+    padding: 0 !important;
+    margin-bottom: 1.5rem;
+  }
+  .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  .go-right {
+    padding-left: 0 !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .go-right {
+    padding-left: 0 !important;
+  }
+}
+
+
+.site-footer > div {
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 767.98px) {
+  .site-footer {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .site-footer > div {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .site-footer .text-start,
+  .site-footer .text-end {
+    text-align: center !important;
+  }
+}
+
+.logistica-image {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  .map-wrapper iframe {
+    height: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  footer {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  footer > * {
+    width: 100%;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-bottom: 0.75rem;
+  }
+
+  footer ul {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 420px) {
+  footer ul.nav {
+    justify-content: center !important;
+  }
+
+  footer ul.nav .nav-link {
+    text-align: center;
+  }
+}
+
+.image-section {
+  background-color: #fff;
+  border-radius: 12px;
   padding: 0;
 }
 
-.contact-heading {
-  margin-bottom: 2.5rem;
+.image-wrapper {
+  background-color: #fff;   
+  border-radius: 12px;
+  overflow: hidden;         
 }
 
-.central-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.image-wrapper {
+  background-color: #fff; 
+  border-radius: 12px;    
+  overflow: hidden;       
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); 
 }
 
-.nav-link:hover {
-  color: #b42231;
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0; 
 }
+
+.image-holder video {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); 
+}
+
+
+.nav-link:focus {
+  outline: none;       
+  box-shadow: none;    
+  color: inherit;      
+  text-decoration: none; 
+}
+
+
+.nav-link:focus-visible {
+  outline: 2px solid #b42231; 
+  outline-offset: 2px;
+}
+
